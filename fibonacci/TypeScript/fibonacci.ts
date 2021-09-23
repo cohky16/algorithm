@@ -1,5 +1,6 @@
  export var solution = (n: number): number => {
-    if (n < 0) return 0;
-    if (n == 0) return 1;
-    return solution(n - 1) + solution(n - 2)
+    let memo: number[] = []
+    memo[0] = 1, memo[1] = 1
+    for (let i = 2; i <= n; i++) memo[i] = memo[i - 1] + memo[i - 2]
+    return memo[n]
 }
