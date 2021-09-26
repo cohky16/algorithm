@@ -8,4 +8,4 @@ export var solution = (nums: number[], target: number): number[] => {
     }
     
     return [-1, -1];
-  };
+};
